@@ -1,0 +1,7 @@
+dados-python/
+├── assets/
+│   └── dashboard.png
+├── app.py
+├── dados-final.csv
+├── requirements.txt
+└── README.md
