@@ -91,8 +91,8 @@ A base contém **133.339 registros** com as seguintes colunas:
 **1. Clone o repositório**
 
 ```bash
-git clone https://github.com/<seu-usuario>/<nome-do-repositorio>.git
-cd <nome-do-repositorio>
+git clone https://github.com/jesielrodrigues/dados-python.git
+cd dados-python
 ```
 
 **2. (Opcional) Crie um ambiente virtual**
