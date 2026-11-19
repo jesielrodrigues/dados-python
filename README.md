@@ -1,129 +1,134 @@
-# 📊 Dashboard de Salários na Área de Dados
+<h1 align="center">📊 Dashboard de Carreira, Mercado e Análise de Dados</h1>
 
-Dashboard interativo desenvolvido em Python para explorar e analisar informações sobre salários no mercado de trabalho da área de Dados. O projeto permite visualizar indicadores, comparar remunerações e identificar tendências de acordo com diferentes características profissionais.
+<p align="center">
+  Explore mais de <b>133 mil registros</b> de salários da área de dados com filtros interativos e gráficos dinâmicos.
+</p>
 
-🔗 **Acesse o dashboard:** [Relatório de Dados Python](https://relatorio-de-dados-python.streamlit.app/)
+<p align="center">
+  <a href="https://relatorio-de-dados-python.streamlit.app/"><img src="https://img.shields.io/badge/🚀_Ver_dashboard_ao_vivo-FF4B4B?style=for-the-badge" alt="Ver dashboard ao vivo"></a>
+</p>
 
-## 🎯 Objetivo
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-1.44.1-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Plotly-5.24.1-3F4F75?logo=plotly&logoColor=white" alt="Plotly">
+  <img src="https://img.shields.io/badge/Pandas-2.2.3-150458?logo=pandas&logoColor=white" alt="Pandas">
+</p>
 
-O objetivo deste projeto é facilitar a visualização e a análise do mercado de trabalho na área de Dados, utilizando gráficos interativos e indicadores que ajudam a compreender a distribuição salarial e as características das oportunidades profissionais.
+<p align="center">
+  <a href="https://relatorio-de-dados-python.streamlit.app/">
+    <img src="assets/dashboard.png" alt="Prévia do dashboard de salários na área de dados" width="100%">
+  </a>
+</p>
 
-## 🚀 Funcionalidades
+---
 
-O dashboard oferece filtros interativos e diferentes visualizações para explorar os dados:
+## 🎯 Sobre o projeto
 
-- **Filtros dinâmicos:** seleção por ano, senioridade, tipo de contrato e tamanho da empresa.
-- **Salário médio:** visualização da média salarial anual em dólares.
-- **Maior salário:** identificação do maior salário presente nos dados filtrados.
-- **Total de registros:** quantidade de registros disponíveis após a aplicação dos filtros.
-- **Cargo mais frequente:** identificação do cargo com maior ocorrência.
-- **Top 10 cargos:** comparação dos cargos com as maiores médias salariais.
-- **Distribuição salarial:** histograma para visualizar a distribuição dos salários.
-- **Tipos de trabalho:** comparação entre modalidades remotas e presenciais.
-- **Análise geográfica:** visualização da média salarial de Cientistas de Dados por país.
-- **Tabela detalhada:** consulta aos registros após a aplicação dos filtros.
+Este projeto é um **dashboard interativo** construído com **Streamlit** e **Plotly** para analisar salários na área de dados ao longo dos últimos anos (2020 a 2025).
 
-## 🛠️ Tecnologias utilizadas
+Com ele é possível responder perguntas como:
 
-| Tecnologia | Finalidade |
+- Quais cargos pagam melhor, em média?
+- Como os salários se distribuem entre faixas?
+- Qual a proporção entre trabalho presencial, híbrido e remoto?
+- Quanto ganha, em média, um(a) Cientista de Dados em cada país?
+
+Tudo isso podendo recortar os dados por **ano**, **senioridade**, **tipo de contrato** e **tamanho da empresa**.
+
+## ✨ Funcionalidades
+
+- 🔍 **Filtros na barra lateral:** ano, senioridade, tipo de contrato e tamanho da empresa.
+- 📈 **Métricas gerais (KPIs):** salário médio, salário máximo, total de registros e cargo mais frequente.
+- 📊 **Top 10 cargos por salário médio:** gráfico de barras horizontais.
+- 📉 **Distribuição de salários anuais:** histograma com as faixas salariais em USD.
+- 🍩 **Proporção dos tipos de trabalho:** gráfico de rosca (presencial, híbrido e remoto).
+- 🗺️ **Mapa mundial:** salário médio de Cientista de Dados por país.
+- 🗂️ **Tabela detalhada:** todos os registros filtrados, para consulta e exploração.
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Uso |
 |---|---|
-| Python | Linguagem de programação |
-| Streamlit | Desenvolvimento da interface interativa |
-| Pandas | Manipulação e análise dos dados |
-| Plotly Express | Criação de gráficos interativos |
+| [Python](https://www.python.org/) | Linguagem principal |
+| [Streamlit](https://streamlit.io/) | Interface web e filtros |
+| [Plotly Express](https://plotly.com/python/plotly-express/) | Gráficos interativos |
+| [Pandas](https://pandas.pydata.org/) | Leitura e manipulação dos dados |
 
-## 📂 Estrutura do projeto
+## 📁 Estrutura do repositório
 
-```text
-dados-python-main/
-│
-├── .devcontainer/
-│   └── devcontainer.json
-│
-├── app.py
-├── dados-final.csv
-├── requirements.txt
-└── README.md
+```
+dados-python/
+├── app.py              # Aplicação Streamlit (filtros, KPIs e gráficos)
+├── dados-final.csv     # Base de dados de salários
+├── requirements.txt    # Dependências do projeto
+├── assets/
+│   └── dashboard.png   # Print usado neste README
+└── .devcontainer/      # Configuração para GitHub Codespaces / Dev Containers
 ```
 
-## ⚙️ Como executar o projeto
+## 🗃️ Sobre os dados
 
-### 1. Clone o repositório
+A base contém **133.339 registros** com as seguintes colunas:
+
+| Coluna | Descrição |
+|---|---|
+| `ano` | Ano de referência do salário |
+| `senioridade` | Nível de experiência (júnior, pleno, sênior, executivo) |
+| `contrato` | Tipo de contrato (integral, parcial, contrato, freelancer) |
+| `cargo` | Nome do cargo |
+| `salario` / `moeda` | Salário na moeda original |
+| `usd` | Salário anual convertido para dólar (USD) |
+| `residencia` / `residencia_iso3` | País de residência da pessoa (código ISO-2 e ISO-3) |
+| `remoto` | Modelo de trabalho (presencial, híbrido, remoto) |
+| `empresa` | País da empresa |
+| `tamanho_empresa` | Porte da empresa (pequena, média, grande) |
+
+> **Nota:** o `app.py` carrega o CSV a partir de uma URL pública do GitHub. Para usar o arquivo local `dados-final.csv`, basta trocar o caminho na chamada `pd.read_csv(...)`.
+
+## 🚀 Como executar localmente
+
+**1. Clone o repositório**
 
 ```bash
-git clone https://github.com/SEU-USUARIO/dados-python.git
+git clone https://github.com/<seu-usuario>/<nome-do-repositorio>.git
+cd <nome-do-repositorio>
 ```
 
-### 2. Acesse a pasta do projeto
+**2. (Opcional) Crie um ambiente virtual**
 
 ```bash
-cd dados-python
+python -m venv .venv
+source .venv/bin/activate      # Linux/macOS
+.venv\Scripts\activate         # Windows
 ```
 
-### 3. Crie um ambiente virtual
-
-```bash
-python -m venv venv
-```
-
-### 4. Ative o ambiente virtual
-
-**Windows:**
-
-```bash
-venv\Scripts\activate
-```
-
-**Linux / macOS:**
-
-```bash
-source venv/bin/activate
-```
-
-### 5. Instale as dependências
+**3. Instale as dependências**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Execute o dashboard
+**4. Rode o app**
 
 ```bash
 streamlit run app.py
 ```
 
-Após executar o comando, acesse o endereço disponibilizado pelo Streamlit no navegador, normalmente:
+O dashboard abrirá em `http://localhost:8501`.
 
-```text
-http://localhost:8501
-```
+### ☁️ Alternativa: GitHub Codespaces
 
-## 📈 Fonte dos dados
+O repositório já inclui um `.devcontainer`. Basta abrir no Codespaces e o app é iniciado automaticamente na porta `8501`.
 
-O dashboard utiliza uma base de dados sobre salários de profissionais da área de Dados, disponibilizada em formato CSV.
+## 🔗 Link do projeto
 
-Os dados incluem informações como:
+👉 **[relatorio-de-dados-python.streamlit.app](https://relatorio-de-dados-python.streamlit.app/)**
 
-- Ano de referência;
-- Nível de senioridade;
-- Tipo de contrato;
-- Cargo;
-- Salário;
-- Moeda;
-- Salário convertido para USD;
-- País de residência;
-- Modalidade de trabalho;
-- Localização da empresa;
-- Tamanho da empresa.
+## 🤝 Contribuindo
 
-A aplicação atualmente carrega os dados diretamente de um arquivo CSV hospedado no GitHub.
-
-## 📌 Observações
-
-Os valores salariais apresentados no dashboard estão expressos em dólares americanos (USD).
-
-Os resultados e indicadores são atualizados conforme os filtros selecionados pelo usuário.
+Sugestões e melhorias são bem-vindas! Abra uma *issue* ou envie um *pull request*.
 
 ---
 
-**Desenvolvido com Python, Pandas, Streamlit e Plotly.**
+<p align="center">Feito com 💙 e Python</p>
