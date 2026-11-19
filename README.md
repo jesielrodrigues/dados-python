@@ -17,7 +17,7 @@
 
 <p align="center">
   <a href="https://relatorio-de-dados-python.streamlit.app/">
-    <img src="assets/dashboard.png" alt="Prévia do dashboard de salários na área de dados" width="100%">
+    <img src="dashboard.png" alt="Prévia do dashboard de salários na área de dados" width="100%">
   </a>
 </p>
 
